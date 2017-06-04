@@ -1,14 +1,13 @@
 var a = 12
-var h = 10
-var areaOfTriangle = a*h/2
-console.log('Triangle field with base a: ' + a + ' and height h: ' + h + ' is equal to: ' + areaOfTriangle);
+var b = 25
+var dzialanie = (a * a) + (2 * a * b) - (b * b)
+console.log('Kiedy pomnożymy ' + a + ' przez ' + a +', dodając do tego ' + a + ' x ' + b + ' x 2 oraz odejmując ' + b + ' podniesione do kwadratu otrzymamy ' + dzialanie);
 
-var question = prompt('Ile cm2 wynosi pole trójkąta o boku 12 cm i wysokości 10 cm?');
 
-switch (question.toLowerCase()) {
-  case '60':
-    alert('Brawo, to jest prawidłowy wynik!');
-    break;
-  default:
-    alert('Niestety nie :(');
+if (dzialanie > 0) {
+    console.log('Wynik jest dodatni');
+} else if (dzialanie < 0) {
+    console.log('Wynik jest ujemny');
+} else {
+    console.log('Wynik jest równy zeru');
 }
