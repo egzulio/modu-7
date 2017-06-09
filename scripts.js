@@ -1,13 +1,9 @@
-function getTriangleArea(a, h) {
-    var dzialanie = a * h / 2
-    if (h <= 0) {
-    console.log('Nieprawidłowe dane');
-} else if (a <= 0) {
-    console.log('Nieprawidłowe dane');
-}
-    else{
-    return dzialanie;
-}
-}
+var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
+var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
+var allNames = test.concat(femaleNames,maleNames);
+var newName = ['Marian'];
 
-console.log(getTriangleArea(10,6));
+if (allNames.indexOf(newName) === -1) {
+    var x = allNames.push('d');
+}
+    
