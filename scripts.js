@@ -1,9 +1,6 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = test.concat(femaleNames,maleNames);
-var newName = ['Marian'];
+var text = 'Velociraptor is a genus of herbivorous ceratopsid dinosaur that first appeared during the late Maastrichtian stage of the late Cretaceous period.'
+var dinosaur = 'triceratops'
+var nameUpperCased = dinosaur.toUpperCase();
+var textCharsAfter = text.replace('Velociraptor', dinosaur);
 
-if (allNames.indexOf(newName) === -1) {
-    var x = allNames.push('d');
-}
-    
+console.log(textCharsAfter.length/2);
