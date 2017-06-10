@@ -1,12 +1,4 @@
-var drawtree = 1
-
-for ( var i = 1 ; i < 10 ; i++) {
-    var star = ''
-    for ( var j = 1 ; i < 10 ; j++) {
-        var star = 'star += '*';
-        for ( var k = 1 ; k < 10 ; k++) {
-            var star = 'star += '**';
-}
-}
-}
-console.log(star).
+var withMenuItemsClass = document.getElementsByClassName('button');
+for ( var withMenuItemsClass = 2; withMenuItemsClass < 3 ; withMenuItemsClass++; withMenuItemsClass.innerText = 'Jeszcze raz';) 
+var array = ['HTML', 2, 'World', 9.99, {name: 'Piotr'}, 99];
+console.log(withMenuItemsClass);
