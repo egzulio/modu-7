@@ -1,19 +1,36 @@
-$(document).ready(function(){
-	console.log('DOM loaded - you can have fun');
-});
-var span = $("span");
-    span.each(function(index, element) {
+var DrawTree5;
+ 
+for (i=1;i<=5;i++)
+{
+    for (a=1;a<=i;a++)
+    {
+    document.write("*");
+    }
+    document.write("<br>");
+}
+document.write("<br>");
 
- $("span:even").css('color', 'red');
+var DrawTree3;
+ 
+for (i=1;i<=3;i++)
+{
+    for (a=1;a<=i;a++)
+    {
+    document.write("*");
+    }
+    document.write("<br>");
+}
+document.write("<br>");
 
-});
-var paragraphs = $('p');
-paragraphs.each(function(index, element) {
+var DrawTree;
+ 
+for (i=1;i<=1;i++)
+{
+    for (a=1;a<=i;a++)
+    {
+    document.write("*");
+    }
+    document.write("<br>");
+}
+document.write("<br>");
 
-    var button = '<button class="btn" data-tmp="' + index + '">Click me</button>'
-    $(element).append(button) 
-
-});
-$("button").click(function(){
-	alert($(this).attr("data-tmp"));
-});
