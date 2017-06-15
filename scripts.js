@@ -1,12 +1,35 @@
-var drawtree = 1
+var DrawTree5;
+ 
+for (i=1;i<=5;i++)
+{
+    for (a=1;a<=i;a++)
+    {
+    document.write("*");
+    }
+    document.write("<br>");
+}
+document.write("<br>");
 
-for ( var i = 1 ; i < 10 ; i++) {
-    var star = ''
-    for ( var j = 1 ; i < 10 ; j++) {
-        var star = 'star += '*';
-        for ( var k = 1 ; k < 10 ; k++) {
-            var star = 'star += '**';
+var DrawTree3;
+ 
+for (i=1;i<=3;i++)
+{
+    for (a=1;a<=i;a++)
+    {
+    document.write("*");
+    }
+    document.write("<br>");
 }
+document.write("<br>");
+
+var DrawTree;
+ 
+for (i=1;i<=1;i++)
+{
+    for (a=1;a<=i;a++)
+    {
+    document.write("*");
+    }
+    document.write("<br>");
 }
-}
-console.log(star).
+document.write("<br>");
