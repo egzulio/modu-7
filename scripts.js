@@ -1,35 +1,15 @@
-var DrawTree5;
- 
-for (i=1;i<=5;i++)
-{
-    for (a=1;a<=i;a++)
-    {
-    document.write("*");
-    }
-    document.write("<br>");
+function DrawTree(DrawTree){
+  for (var i = 1; i < asd; i++) {
+    var Star = "*";
+    for (var j = 1; j < i; j++) {
+      Star += '*';
+    } console.log(' '.repeat(DrawTree - i) + star.split('').join(' '))
+  }
 }
-document.write("<br>");
 
-var DrawTree3;
- 
-for (i=1;i<=3;i++)
-{
-    for (a=1;a<=i;a++)
-    {
-    document.write("*");
-    }
-    document.write("<br>");
-}
-document.write("<br>");
+var DrawTree2 = prompt('Choinka bedzie miala wierszów...');
 
-var DrawTree;
- 
-for (i=1;i<=1;i++)
-{
-    for (a=1;a<=i;a++)
-    {
-    document.write("*");
-    }
-    document.write("<br>");
-}
-document.write("<br>");
+drawTree(DrawTree2
+         
+         
+         asd
