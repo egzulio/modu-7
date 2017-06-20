@@ -1,15 +1,12 @@
-function DrawTree(DrawTree){
-  for (var i = 1; i < asd; i++) {
+function DrawTree(ZMIENNA){
+  for (var i = 1; i < ZMIENNA; i++) {
     var Star = "*";
     for (var j = 1; j < i; j++) {
       Star += '*';
-    } console.log(' '.repeat(DrawTree - i) + star.split('').join(' '))
+    } console.log(' '.repeat(ZMIENNA - i) + Star.split('').join(' '))
   }
 }
 
 var DrawTree2 = prompt('Choinka bedzie miala wierszów...');
 
-drawTree(DrawTree2
-         
-         
-         asd
+DrawTree(DrawTree2)
