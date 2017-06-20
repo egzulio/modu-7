@@ -1,6 +1,8 @@
-var button = document.getElementsByClassName('przycisk');
+var list = document.getElementById('list');
+var add = document.getElementById('addElem');
+var listli = document.getElementsByTagName('li');
 
-for (var i = 0; i < button.length; i++) {
-  var buttonTxt = button[i].innerText;
-  console.log(buttonTxt)
-}
+add.addEventListener('click', function() {
+  list.innerHTML += '<li>item ' + listli.length + '</li>'
+})
+list.appendChild(addEventListener);
