@@ -1,4 +1,6 @@
-var withMenuItemsClass = document.getElementsByClassName('button');
-for ( var withMenuItemsClass = 2; withMenuItemsClass < 3 ; withMenuItemsClass++; withMenuItemsClass.innerText = 'Jeszcze raz';) 
-var array = ['HTML', 2, 'World', 9.99, {name: 'Piotr'}, 99];
-console.log(withMenuItemsClass);
+var button = document.getElementsByClassName('przycisk');
+
+for (var i = 0; i < button.length; i++) {
+  var buttonTxt = button[i].innerText;
+  console.log(buttonTxt)
+}
