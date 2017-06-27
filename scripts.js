@@ -27,7 +27,7 @@ function moveLastSlide(){
     carouselList.css({marginLeft: -800});
   };
     
-    
+
     
     
        $('.right-btn').click(function(){
@@ -37,3 +37,4 @@ function moveLastSlide(){
   $('.left-btn').click(function(){
     changeLeftSlide();
   });
+  })
