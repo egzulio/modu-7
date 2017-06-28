@@ -1,36 +1,30 @@
-var DrawTree5;
- 
-for (i=1;i<=5;i++)
-{
-    for (a=1;a<=i;a++)
-    {
-    document.write("*");
-    }
-    document.write("<br>");
-}
-document.write("<br>");
+function Telefon(marka, cena, kolor) {
+  this.marka = marka;
+  this.cena = cena;
+  this.kolor = kolor;
+};
 
-var DrawTree3;
- 
-for (i=1;i<=3;i++)
-{
-    for (a=1;a<=i;a++)
-    {
-    document.write("*");
-    }
-    document.write("<br>");
-}
-document.write("<br>");
 
-var DrawTree;
- 
-for (i=1;i<=1;i++)
-{
-    for (a=1;a<=i;a++)
-    {
-    document.write("*");
-    }
-    document.write("<br>");
-}
-document.write("<br>");
 
+
+Telefon.prototype.printInfo = function () {
+  console.log('Marka smartfona to ' + this.marka + ', cena wynosi ' + this.cena + ' zł, kolor ' + this.kolor + '.');
+};
+
+
+
+
+
+var iphone6s = new Telefon('Apple', 2250, 'silver'),
+S6 = new Telefon('Samsung', 2200, 'white'),
+OnePlus = new Telefon('One Plus One', 2120, 'black');
+
+
+
+
+
+
+
+iphone6s.printInfo();
+S6.printInfo();
+OnePlus.printInfo();
