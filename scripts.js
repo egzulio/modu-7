@@ -1,30 +1,31 @@
-function Telefon(marka, cena, kolor) {
-  this.marka = marka;
-  this.cena = cena;
-  this.kolor = kolor;
+function Button(text) {
+  this.text = text || 'Helllo';
 };
 
 
 
 
-Telefon.prototype.printInfo = function () {
-  console.log('Marka smartfona to ' + this.marka + ', cena wynosi ' + this.cena + ' zł, kolor ' + this.kolor + '.');
+Button.prototype = {
+  
+  create: function(){
+    var self = this;
+    this.$element = $('<button>');
+    this.$element.text(this.text);
+    this.$element.click(function(){
+      alert(self.text);
+    });
+    this.$element.appendTo($('body'));
+  }
 };
 
 
 
 
 
-var iphone6s = new Telefon('Apple', 2250, 'silver'),
-S6 = new Telefon('Samsung', 2200, 'white'),
-OnePlus = new Telefon('One Plus One', 2120, 'black');
+var btn1 = new Button('Hello!');
 
 
 
 
 
-
-
-iphone6s.printInfo();
-S6.printInfo();
-OnePlus.printInfo();
+btn1.create();
