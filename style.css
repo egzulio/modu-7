@@ -6,3 +6,62 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+main, header, div.box, button.trigger, a.tweet {
+	width: 100%;
+}
+
+main {
+	height: 100vh;
+	background-color: rgb(104, 171, 232);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: #fff;
+}
+
+header h1, div.box h2, div.box h3 {
+	text-align: center;
+	margin: 40px auto;
+}
+
+header h1 {
+	font-size: 50px;
+	margin-top: 60px;
+}
+
+div.box h2, div.box h3 {
+	width: 1200px;
+}
+
+div.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	height: 120px;
+	width: 300px;
+}
+
+button.trigger {
+	border-style: none;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+a.tweet {
+	text-decoration: none;
+}
+
+button.trigger, a.tweet {
+	height: 40px;
+	border: 2px solid #fff;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
