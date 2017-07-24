@@ -1,37 +1,45 @@
-$(document).ready(function() {
-	var prefix = "https://cors-anywhere.herokuapp.com/",
-		tweetLink = "https://twitter.com/intent/tweet?text=",
-		quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+var url = 'https://restcountries.eu/rest/v1/name/',
+	$table = $('country-table');
 
-	function getQuote() {
-		$.getJSON(prefix + quoteUrl, createTweet);
-		$.ajaxSetup({ cache: false });
-	}
+$('#search').click(searchCountries);
 
-	function createTweet(input) {
-		var data = input[0],
-			quoteText = $(data.content).text().trim(),
-			quoteAuthor = data.title;
+function searchCountries() {
+	var countryName = $('#country-name-input').val();
+	if (!countryName.length) countryName = 'Poland';
 
-			if(!quoteAuthor.length) {
-				quoteAuthor = 'Unknow author';
-			}
-
-			var tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
-
-			if (tweetText.length > 140) {
-				getQuote();
-			} else {
-				var tweet = tweetLink + encodeURIComponent(tweetText);
-				$('.quote').text(quoteText);
-				$('.author').text("Author: " + quoteAuthor);
-	 			$('.tweet').attr('href', tweet);
-			}
-	}
-
-	getQuote();
-
-	$('.trigger').click(function() {
-		getQuote();
+	$.ajax({
+		url: url + countryName,
+		method: 'GET',
+		success: makeTable
 	});
-});
+}
+
+function makeTable(resp) {
+
+	resp.forEach(function(item) {
+		var $country = $('<div>').addClass('country-table'),
+			$countryNameHeader = $('<h2>').addClass('country-name-th'),
+			$countryTable = $('<table>'),
+			$tableRow = $('<tr>'),
+			$nameColumn = $('<td>'),
+			$valueColumn = $('<td>');
+
+		$country.appendTo('#body');
+		$countryNameHeader.text(item.name).appendTo($country);
+		$countryTable.appendTo($country);
+		$tableRow.appendTo($countryTable);
+		$nameColumn.text('capital: ').appendTo($tableRow);
+		$valueColumn.text(item.capital).appendTo($tableRow);
+	});
+
+
+}
+
+/*
+function showCountriesList(resp) {
+	countriesList.empty();
+	resp.forEach(function(item) {
+		$('<li>').text(item.name).appendTo(countriesList);
+	});
+}
+*/
